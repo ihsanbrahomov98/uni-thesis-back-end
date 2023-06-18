@@ -1,6 +1,6 @@
 package com.arjuncodes.studentsystem.model.UserModel;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 
 import javax.persistence.*;
 

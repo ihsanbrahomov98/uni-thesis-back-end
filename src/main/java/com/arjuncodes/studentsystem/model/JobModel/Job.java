@@ -1,13 +1,12 @@
-package com.arjuncodes.studentsystem.model.SearchModel;
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+package com.arjuncodes.studentsystem.model.JobModel;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="SEARCH")
-public class Search {
+public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

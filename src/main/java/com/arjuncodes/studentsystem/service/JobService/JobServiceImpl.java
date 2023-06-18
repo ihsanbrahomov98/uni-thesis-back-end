@@ -1,84 +1,79 @@
-package com.arjuncodes.studentsystem.service.SearchService;
+package com.arjuncodes.studentsystem.service.JobService;
 
-import com.arjuncodes.studentsystem.Enums.JobEnums.JobEnums;
-import com.arjuncodes.studentsystem.model.AdminModel.Admin;
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
-import com.arjuncodes.studentsystem.model.SearchModel.Search;
-import com.arjuncodes.studentsystem.repository.SearchRepository.SearchRepository;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
+import com.arjuncodes.studentsystem.model.JobModel.Job;
+import com.arjuncodes.studentsystem.repository.JobRepository.JobRepository;
 import com.arjuncodes.studentsystem.repository.SitterRepository.SitterRepository;
-import com.arjuncodes.studentsystem.service.ProductService.SitterService;
+import com.arjuncodes.studentsystem.service.SitterService.SitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
-public class SearchServiceImpl implements SearchService {
+public class JobServiceImpl implements JobService {
     @Autowired
     private SitterRepository sitterRepository;
     @Autowired
-    private SearchRepository searchRepository;
+    private JobRepository jobRepository;
     @Autowired
     private SitterService sitterService;
 
-    public Search saveSearch(Search search) {
-        return searchRepository.save(search);
+    public Job saveSearch(Job job) {
+        return jobRepository.save(job);
     }
 
-    public void acceptJobById(Search search,Long id){
+    public void acceptJobById(Job job, Long id){
         Sitter sitterDB =  sitterService.fetchSitterById(id);
         if (sitterDB != null) {
-            for (Search item : sitterDB.getJobs()) {
-                if(item.getId().equals(search.getId())){
+            for (Job item : sitterDB.getJobs()) {
+                if(item.getId().equals(job.getId())){
                     System.out.println(item.getJobStatus());
                     item.setJobStatus("accepted");
                     System.out.println(item.getId());
-                    searchRepository.save(item);
+                    jobRepository.save(item);
                 }
             }
         }
     }
-    public void declineJobById(Search search,Long id){
+    public void declineJobById(Job job, Long id){
         Sitter sitterDB =  sitterService.fetchSitterById(id);
         System.out.println(id);
         if (sitterDB != null) {
-            for (Search item : sitterDB.getJobs()) {
-                if(item.getId().equals(search.getId())){
+            for (Job item : sitterDB.getJobs()) {
+                if(item.getId().equals(job.getId())){
                     System.out.println(item.getJobStatus());
                     item.setJobStatus("decline");
                     System.out.println(item.getId());
-                    searchRepository.save(item);
+                    jobRepository.save(item);
                 }
             }
         }
     }
-    public void historyJobById(Search search,Long id){
+    public void historyJobById(Job job, Long id){
         Sitter sitterDB =  sitterService.fetchSitterById(id);
         if (sitterDB != null) {
-            for (Search item : sitterDB.getJobs()) {
-                if(item.getId().equals(search.getId())){
+            for (Job item : sitterDB.getJobs()) {
+                if(item.getId().equals(job.getId())){
                     System.out.println(item.getJobStatus());
                     item.setJobStatus("history");
                     System.out.println(item.getId());
-                    searchRepository.save(item);
+                    jobRepository.save(item);
                 }
             }
         }
     }
-    public void bookSitterById (Search search, Long id){
+    public void bookSitterById (Job job, Long id){
         Sitter sitterDB =  sitterService.fetchSitterById(id);;
         if (sitterDB != null) {
-            search.setJobStatus("pending");
-            search.setSitter(sitterDB);
-            searchRepository.save(search);
-            sitterDB.getJobs().add(search);
+            job.setJobStatus("pending");
+            job.setSitter(sitterDB);
+            jobRepository.save(job);
+            sitterDB.getJobs().add(job);
             sitterRepository.save(sitterDB);
         }
         System.out.println(sitterDB.getJobs().size());

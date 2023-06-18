@@ -1,15 +1,11 @@
 package com.arjuncodes.studentsystem.controller.UserController;
 
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
 import com.arjuncodes.studentsystem.model.UserModel.User;
 import com.arjuncodes.studentsystem.repository.UserRepository.UserRepository;
-import com.arjuncodes.studentsystem.service.ProductService.SitterService;
+import com.arjuncodes.studentsystem.service.SitterService.SitterService;
 import com.arjuncodes.studentsystem.service.UserService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 

@@ -1,15 +1,9 @@
 package com.arjuncodes.studentsystem.service.AdminAuthenticationService;
 
 import com.arjuncodes.studentsystem.model.AdminModel.Admin;
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
-import com.arjuncodes.studentsystem.model.UserModel.User;
 import com.arjuncodes.studentsystem.repository.AdminRepository.AdminRepository;
-import com.arjuncodes.studentsystem.repository.UserRepository.UserRepository;
 import com.arjuncodes.studentsystem.response.AdminResponse.AdminResponse;
-import com.arjuncodes.studentsystem.response.SitterResponse.SitterResponse;
-import com.arjuncodes.studentsystem.response.UserReponse.UserResponse;
 import com.arjuncodes.studentsystem.service.AdminService.AdminService;
-import com.arjuncodes.studentsystem.service.UserService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

@@ -1,6 +1,6 @@
 package com.arjuncodes.studentsystem.service.ReviewService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.arjuncodes.studentsystem.model.ReviewModel.Review;
 
 public interface ReviewService {

@@ -1,6 +1,5 @@
 package com.arjuncodes.studentsystem.repository.SitterRepository;
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
-import com.arjuncodes.studentsystem.model.UserModel.User;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

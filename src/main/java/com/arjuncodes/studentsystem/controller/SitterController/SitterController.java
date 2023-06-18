@@ -1,12 +1,11 @@
-package com.arjuncodes.studentsystem.controller.ProductController;
+package com.arjuncodes.studentsystem.controller.SitterController;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
-import com.arjuncodes.studentsystem.service.ProductService.SitterService;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
+import com.arjuncodes.studentsystem.service.SitterService.SitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @RestController

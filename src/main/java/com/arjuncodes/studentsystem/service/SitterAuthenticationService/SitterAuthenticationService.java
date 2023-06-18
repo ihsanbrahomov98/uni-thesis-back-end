@@ -1,6 +1,6 @@
 package com.arjuncodes.studentsystem.service.SitterAuthenticationService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import org.springframework.http.ResponseEntity;
 
 public interface SitterAuthenticationService {

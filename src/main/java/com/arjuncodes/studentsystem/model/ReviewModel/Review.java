@@ -1,9 +1,8 @@
 package com.arjuncodes.studentsystem.model.ReviewModel;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.arjuncodes.studentsystem.model.UserModel.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 

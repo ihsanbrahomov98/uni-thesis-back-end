@@ -1,16 +1,13 @@
 package com.arjuncodes.studentsystem.service.SitterAuthenticationService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
-import com.arjuncodes.studentsystem.model.UserModel.User;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.arjuncodes.studentsystem.repository.SitterRepository.SitterRepository;
 import com.arjuncodes.studentsystem.response.SitterResponse.SitterResponse;
-import com.arjuncodes.studentsystem.response.UserReponse.UserResponse;
-import com.arjuncodes.studentsystem.service.ProductService.SitterService;
+import com.arjuncodes.studentsystem.service.SitterService.SitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 public class SitterAuthenticationServiceImpl implements  SitterAuthenticationService{

@@ -1,13 +1,12 @@
-package com.arjuncodes.studentsystem.service.ProductService;
+package com.arjuncodes.studentsystem.service.SitterService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.arjuncodes.studentsystem.repository.SitterRepository.SitterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class SitterServiceImpl implements SitterService {

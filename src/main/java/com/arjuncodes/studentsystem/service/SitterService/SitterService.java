@@ -1,6 +1,6 @@
-package com.arjuncodes.studentsystem.service.ProductService;
+package com.arjuncodes.studentsystem.service.SitterService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 
 import java.util.List;
 

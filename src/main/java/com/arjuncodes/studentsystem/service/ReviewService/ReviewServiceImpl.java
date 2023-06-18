@@ -1,16 +1,12 @@
 package com.arjuncodes.studentsystem.service.ReviewService;
 
-import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.SitterModel.Sitter;
 import com.arjuncodes.studentsystem.model.ReviewModel.Review;
-import com.arjuncodes.studentsystem.model.SearchModel.Search;
 import com.arjuncodes.studentsystem.repository.ReviewRepository.ReviewRepository;
 import com.arjuncodes.studentsystem.repository.SitterRepository.SitterRepository;
-import com.arjuncodes.studentsystem.service.ProductService.SitterService;
+import com.arjuncodes.studentsystem.service.SitterService.SitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class ReviewServiceImpl implements  ReviewService {

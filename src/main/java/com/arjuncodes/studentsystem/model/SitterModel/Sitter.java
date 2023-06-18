@@ -1,7 +1,7 @@
-package com.arjuncodes.studentsystem.model.ProductModel;
+package com.arjuncodes.studentsystem.model.SitterModel;
 
 import com.arjuncodes.studentsystem.model.ReviewModel.Review;
-import com.arjuncodes.studentsystem.model.SearchModel.Search;
+import com.arjuncodes.studentsystem.model.JobModel.Job;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class Sitter {
     private int price;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "sitter", cascade = CascadeType.ALL)
-    private List<Search> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "sitter", cascade = CascadeType.ALL)
     private List<Review> review = new ArrayList<>();
@@ -76,11 +76,11 @@ public class Sitter {
 
 
 
-    public List<Search> getJobs() {
+    public List<Job> getJobs() {
         return jobs;
     }
 
-    public void setJobs(List<Search> jobs) {
+    public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
     }
 

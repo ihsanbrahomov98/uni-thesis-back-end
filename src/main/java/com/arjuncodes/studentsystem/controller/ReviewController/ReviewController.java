@@ -20,7 +20,7 @@ public class ReviewController {
     private ReviewService reviewService;
 
     @PostMapping("/all")
-    public Sitter listByCategoryAndFilter(@RequestBody Review review){
+    public Sitter getAllReviews(@RequestBody Review review){
         Long id = review.getId();
         System.out.println(id);
         return reviewService.findAll(id);

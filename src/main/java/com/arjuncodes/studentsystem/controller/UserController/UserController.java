@@ -26,18 +26,18 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/all")
-    public List<User> list(){
+    public List<User> getAllUsers(){
         return userService.getAllUser();
     }
 
     @PostMapping("/create")
-    public User saveUser(@RequestBody User user){
+    public User createUser(@RequestBody User user){
 
         return userService.saveUser(user);
     }
 
     @GetMapping("/findone/{id}")
-    public User fetchUserById(@PathVariable("id") Long  userId){
+    public User getUserById(@PathVariable("id") Long  userId){
         return userService.fetchUserById(userId);
     }
 

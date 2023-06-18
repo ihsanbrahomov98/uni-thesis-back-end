@@ -20,17 +20,17 @@ public class AdminController {
     private UserService userService;
 
     @GetMapping("/all")
-    public List<Admin> list(){
+    public List<Admin> getAllAdmins(){
         return adminService.getAllAdmin();
     }
 
     @GetMapping("/findone/{id}")
-    public Admin fetchAdminById(@PathVariable("id") Long  adminId){
+    public Admin getAdminById(@PathVariable("id") Long  adminId){
         return adminService.fetchAdminById(adminId);
     }
 
     @PostMapping("/create")
-    public Admin saveAdmin(@RequestBody Admin admin){
+    public Admin createAdmin(@RequestBody Admin admin){
 //        System.out.println(admin.getName());
 //        User user =  userService.fetchUserById(Long.parseLong(admin.getAdminId()));
 //        System.out.println(user);

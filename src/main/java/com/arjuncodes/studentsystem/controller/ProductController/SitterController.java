@@ -17,7 +17,7 @@ public class SitterController {
     private SitterService sitterService;
 
     @GetMapping("/all")
-    public List<Sitter> list(){
+    public List<Sitter> getAllSitters(){
         return sitterService.getAllSitter();
     }
 
@@ -27,25 +27,25 @@ public class SitterController {
     String  filter4, @PathVariable("filter5")  String  filter5, @PathVariable("filter6")  String  filter6 ){
         return  sitterService.filerSitter("all",fitler1,filter2,filter3,filter4,filter5,filter6);
     }
-    @GetMapping("/category/{cat}")
-    public List<Sitter> listByCategory(@PathVariable("cat") String  cat){
-//    return  sitterService.getAllSitter().stream().filter(e -> e.getCategory().equals(cat)).collect(Collectors.toList());
-        return null;
-    }
-
-    @GetMapping("/category/filter/{cat}/{filter1}/{filter2}/{filter3}/{filter4}/{filter5}/{filter6}")
-    public List<Sitter>  listByCategoryAndFilter(@PathVariable("cat") String  cat, @PathVariable("filter1")  String  fitler1, @PathVariable("filter2")  String  filter2, @PathVariable("filter3")  String  filter3,
-                                                 @PathVariable("filter4")  String  filter4, @PathVariable("filter5")  String  filter5, @PathVariable("filter6")  String  filter6 ){
-     return  sitterService.filerSitter(cat,fitler1,filter2,filter3,filter4,filter5,filter6);
-
-    }
+//    @GetMapping("/category/{cat}")
+//    public List<Sitter> listByCategory(@PathVariable("cat") String  cat){
+////    return  sitterService.getAllSitter().stream().filter(e -> e.getCategory().equals(cat)).collect(Collectors.toList());
+//        return null;
+//    }
+//
+//    @GetMapping("/category/filter/{cat}/{filter1}/{filter2}/{filter3}/{filter4}/{filter5}/{filter6}")
+//    public List<Sitter>  listByCategoryAndFilter(@PathVariable("cat") String  cat, @PathVariable("filter1")  String  fitler1, @PathVariable("filter2")  String  filter2, @PathVariable("filter3")  String  filter3,
+//                                                 @PathVariable("filter4")  String  filter4, @PathVariable("filter5")  String  filter5, @PathVariable("filter6")  String  filter6 ){
+//     return  sitterService.filerSitter(cat,fitler1,filter2,filter3,filter4,filter5,filter6);
+//
+//    }
     @GetMapping("/findone/{id}")
-    public Sitter fetchSitterById(@PathVariable("id") Long  sitterId){
+    public Sitter getSitterById(@PathVariable("id") Long  sitterId){
         return sitterService.fetchSitterById(sitterId);
     }
 
     @PostMapping("/create")
-    public Sitter saveSitter(@RequestBody Sitter sitter){
+    public Sitter createSitter(@RequestBody Sitter sitter){
     return sitterService.saveSitter(sitter);
     }
 

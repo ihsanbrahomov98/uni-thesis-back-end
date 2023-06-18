@@ -12,14 +12,14 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/search")
+@RequestMapping("/job")
 @CrossOrigin
 public class SearchController {
     @Autowired
     private SearchService searchService;
 
     @PostMapping("/all")
-    public Set<Sitter> listByCategoryAndFilter(@RequestBody Search search){
+    public Set<Sitter> getAllAvailableSitters(@RequestBody Search search){
         try {
             return searchService.searchSitters(search.getCity(), search.getStartingDate(),
                     search.getEndingDate(), search.getOfferedServices());
@@ -28,7 +28,7 @@ public class SearchController {
         }
     }
     @PostMapping("/book/{id}")
-    public void bookSitterById(@RequestBody Search search, @PathVariable("id") Long sitterId){
+    public void bookSitter(@RequestBody Search search, @PathVariable("id") Long sitterId){
     searchService.bookSitterById(search, sitterId);
     }
     @PostMapping("accept/{id}")
@@ -40,7 +40,11 @@ public class SearchController {
         searchService.declineJobById(search, sitterId);
     }
     @PostMapping("history/{id}")
-    public void finishJob(@RequestBody Search search, @PathVariable("id") Long sitterId){
+    public void history(@RequestBody Search search, @PathVariable("id") Long sitterId){
         searchService.historyJobById(search, sitterId);
+    }
+    @PostMapping("decline/after/accepting/{id}")
+    public void declineJobAfterAccepting(@RequestBody Search search, @PathVariable("id") Long sitterId){
+        searchService.declineJobById(search, sitterId);
     }
 }

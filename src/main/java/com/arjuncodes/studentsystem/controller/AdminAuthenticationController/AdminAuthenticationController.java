@@ -23,8 +23,8 @@ public class AdminAuthenticationController {
                 adminAuthenticationService.loginAdmin(admin);
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<?> registerAdmin(@RequestBody Admin admin) {
-        return adminAuthenticationService.registerAdmin(admin);
-    }
+//    @PostMapping("/register")
+//    public ResponseEntity<?> registerAdmin(@RequestBody Admin admin) {
+//        return adminAuthenticationService.registerAdmin(admin);
+//    }
 }

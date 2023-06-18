@@ -11,21 +11,9 @@ public class Admin {
     private Long id;
     private String username;
     private String email;
-    private String adminId;
     private String password;
     private String role;
     private String telephone;
-    @ManyToOne()
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public String getTelephone() {
         return telephone;
@@ -49,14 +37,6 @@ public class Admin {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getAdminId() {
-        return adminId;
-    }
-
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
     }
 
     public String getEmail() {

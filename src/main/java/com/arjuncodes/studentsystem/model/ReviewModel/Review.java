@@ -1,6 +1,7 @@
 package com.arjuncodes.studentsystem.model.ReviewModel;
 
 import com.arjuncodes.studentsystem.model.ProductModel.Sitter;
+import com.arjuncodes.studentsystem.model.UserModel.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -18,6 +19,17 @@ public class Review {
     @JsonIgnore
     @ManyToOne
     private Sitter sitter;
+    @JsonIgnore
+    @ManyToOne
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Long getId() {
         return id;

@@ -23,7 +23,7 @@ public class Sitter {
     private String address;
 
     private String city;
-    private String housing;
+    private String housingSize;
 //    //TODO
 //    private List<String> reviews;
 //        //TODO
@@ -160,12 +160,12 @@ public class Sitter {
 
 
 
-    public String getHousing() {
-        return housing;
+    public String getHousingSize() {
+        return housingSize;
     }
 
-    public void setHousing(String housing) {
-        this.housing = housing;
+    public void setHousingSize(String housingSize) {
+        this.housingSize = housingSize;
     }
 
     public String getStartingDate() {
@@ -207,12 +207,12 @@ public class Sitter {
 //        this.pets = pets;
 //    }
 //
-//    public HashMap<String, String> getHousing() {
-//        return housing;
+//    public HashMap<String, String> getHousingSize() {
+//        return housingSize;
 //    }
 //
-//    public void setHousing(HashMap<String, String> housing) {
-//        this.housing = housing;
+//    public void setHousingSize(HashMap<String, String> housingSize) {
+//        this.housingSize = housingSize;
 //    }
 //
 //    public List<String> getReviews() {

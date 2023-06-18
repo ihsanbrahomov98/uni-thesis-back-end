@@ -97,6 +97,10 @@ public class SearchServiceImpl implements SearchService {
         }
         }
         for (Sitter item : FilterSittersByCity) {
+            if (item.getTakenDates() == null || item.getTakenDates().equals("")) {
+                System.out.println(item.getEmail());
+                filteredSitters.add(item);
+            }
             if(item.getTakenDates() != null && !item.getTakenDates().equals("")){
             String[] firstIndex = item.getTakenDates().split("\\|");
             if(firstIndex.length > 1){

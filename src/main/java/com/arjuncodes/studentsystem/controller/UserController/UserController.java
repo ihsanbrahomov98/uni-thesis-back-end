@@ -48,12 +48,7 @@ public class UserController {
     }
     @PutMapping("/update")
     public User updateUser(@RequestBody User user){
-        Sitter sitter =  sitterService.fetchSitterById(Long.parseLong(user.getUserId()));
-        user.setProduct(sitter);
         return userService.updateUser(user);
     }
-
-
-
 
 }

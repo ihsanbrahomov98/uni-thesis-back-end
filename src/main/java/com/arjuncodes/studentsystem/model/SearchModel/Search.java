@@ -17,19 +17,10 @@ public class Search {
     private String offeredServices;
     private String telephone;
     private String jobStatus;
-    private String name;
     @JsonIgnore
     @ManyToOne
     private Sitter sitter;
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getTelephone() {
         return telephone;

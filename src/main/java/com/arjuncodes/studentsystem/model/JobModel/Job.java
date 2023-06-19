@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
-@Table(name="SEARCH")
+@Table(name="JOB")
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +20,17 @@ public class Job {
     @ManyToOne
     private Sitter sitter;
 
+    @JsonIgnore
+    @ManyToOne
+    private Sitter user;
+
+    public Sitter getUser() {
+        return user;
+    }
+
+    public void setUser(Sitter user) {
+        this.user = user;
+    }
 
     public String getTelephone() {
         return telephone;
